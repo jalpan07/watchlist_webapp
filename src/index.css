@@ -1,0 +1,82 @@
+body{
+  background-color: black;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.movie-list{
+  display: flex;
+  padding: 0px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+::-webkit-scrollbar {
+  height: 0px;              /* height of horizontal scrollbar ← You're missing this */
+  width: 0px;               /* width of vertical scrollbar */
+}
+
+.movie-poster{
+  padding: 10px;
+  justify-content: start;
+}
+
+.search-bar-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+}
+
+.heading{
+  margin: auto 50px;
+  font-size: 25px;
+}
+
+.search-box{
+  margin: auto 60px;
+  height: 20px;
+}
+
+.search-box input{
+  height: 20px;
+  width: 210px;
+  border: 1px grey solid;
+  border-radius: 6px;
+}
+.search-box input ::placeholder{
+  margin-left: 50px;
+  color: black;
+}
+
+.movie-poster{
+  position:relative;
+  transition: transform 0.1s;
+}
+
+.movie-poster:hover{
+  cursor: pointer;
+  transform: scale(1.07);
+}
+
+.movie-poster:hover .overlay{
+  opacity:1;
+}
+
+.overlay{
+  position: absolute;
+  background: rgba(0,0,0,0.7);
+  width: 82%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom:0px;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.overlay-text{
+  text-align: center;
+  padding: auto auto;
+  font-size: 15px;
+}
